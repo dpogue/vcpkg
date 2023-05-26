@@ -5794,7 +5794,7 @@
     },
     "omniorb": {
       "baseline": "4.3.0",
-      "port-version": 0
+      "port-version": 1
     },
     "ompl": {
       "baseline": "1.5.1",
