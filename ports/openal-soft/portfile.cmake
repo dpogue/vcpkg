@@ -2,10 +2,10 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO kcat/openal-soft
     REF ${VERSION}
-    SHA512 21f768484978e4321b733004988cb5ecf43d908e7e08f2d421a338633fcfb2ade722d035de73742470ff135ab538d6b9b56df14020976adb1d1e081dfb095c6b
+    SHA512 6fdb5e02f4d4e2d483bccf69121dda9b691170e88d301f53b5e3b3ab196541d7b0b23a868acdf85f6dacac9d8508079f67cb7d733e186a13a66ee70ecdd813f0
     HEAD_REF master
     PATCHES
-      c12ada68951ea67a59bef7d4fcdf22334990c12a.patch # Merged upstream, remove in next version
+      96f62e37e9ae015ee104e568cb57ea0d8964a84b.patch # Merged upstream, remove in next version
 )
 
 vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
@@ -81,6 +81,7 @@ vcpkg_cmake_configure(
         ALSOFT_BACKEND_WINMM
         ALSOFT_BACKEND_DSOUND
         CMAKE_DISABLE_FIND_PACKAGE_WindowsSDK
+        CMAKE_POLICY_DEFAULT_CMP0057
 )
 
 vcpkg_cmake_install()
